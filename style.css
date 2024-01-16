@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin: 0;                                           /* aplicando o reset*/
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;                  /* usando as fontes*/
+    height: 100%;
+}
+
+html {                                          /*entrando dentro do seletor html*/
+    scroll-behavior: smooth;                       /*deizando a rolagem suave*/
+}
+
+html {                          
+    height: 100%;
+}
+
+        /*INICIO HEADER*/
+
+.nav {
+   background-color: #121212;
+   height: 80px;
+   width: 100%;                             /*estilizando o nav*/
+   display: flex;                           /*ativando o flex box*/
+   justify-content: flex-end;               /*colocando os itens pro final*/
+   position: fixed;                         /*fixando o home-sobre-projetos*/
+   z-index: 9;                           /*informando que a barra "sobre" tem peso maior no empilhamento de itens*/
+   top: 0;
+}
+
+.list-1 {
+    display: flex;                  /*colocando os itens em linha*/
+    align-items: center;            /*alinhando os itens no centro*/
+    list-style: none;               /*tirando as bolinhas entre eles*/
+    margin-right: 28px;
+}
+
+.list-1 a{                          /*estilizando os textos dentro do nav*/
+    text-decoration: none;          /*tirando a linha debiaxo dos nomes*/
+    color: #ddd;                  /*mudando a cor do texto*/
+    padding: 20px;                  /*colocando um espaçamento INTERNO entre eles*/
+}
+
+.list-1 a:hover {                   /*acessando os nomes - acessando a ancora - hover ao passar o mouse*/
+    color: #ffd700;
+}
+
+        /*FIM HEADER*/
+
+        /*INICIO MAIN*/
+
+.main {
+    width: 100%;                  /*fazendo o elemento .main ocupar toda a largura disponivel*/
+    background-color: #121212;
+    height:calc(100% - 80px);     /*Define a altura do elemento como 100% com uma redução de 80 pixels do header*/
+    background-image: url("images/programador.png");  /*colocando img de fundo atraves da url*/
+    display: flex;                  /*ativando o display flex*/
+    align-items: center;            /*alinhando no centro na vertical*/
+    padding-bottom: 150px;          /*espaçamento interno em baixo*/
+    
+}
+
+.hero {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.main h1 {
+    color: #FFFFFF;
+    font-size: 54px;
+    padding-bottom: 40px;
+    
+}
+
+.botao {
+    background-color: #FFFFFF;
+    cursor: pointer;                /*indica ao passar ou cursor, que é um botão*/
+    border: 0;                       /*tirando as bordas*/
+    padding: 8px;                    /*espaçamento interno*/
+    border-radius: 14px;             /*arredondando a borda*/
+    font-size: 14px;                 /*aumentando a font*/
+    font-weight: bold;              /*deixando negrito*/
+    transition: 0.9s;               /*complemento do transform, a scale ira aumentar em 0.9s*/
+}
+
+.botao:hover {                      /*hover: estado do elemento ao passar o mouse*/
+    transform: scale(1.1);          /*scale: aumenta a proporção do botão*/
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /*colocando uma sombra no botão*/
+}
+
+.main a {
+    text-decoration: none;          /*tirando o sublinhado do texto*/
+}
+
+        /*FIM MAIN*/
+
+.sobre {
+    width: 100%;
+    background-color:#e4e3db;     /*cor de fundo*/
+    padding-left: 10%;              /*espaçamento interno a esquerda*/
+    padding-right: 10%;             /*espaçamento interno a direita*/
+    padding-top: 80px;              /*espaçamento interno em cima*/
+    padding-bottom: 80px;           /*espaçamento interno em baixo*/
+
+    display: flex;                  /*ativando o display-flex para alinhar a img e o texto*/
+    align-items: center;            /*alinhando o texto e img em linha*/
+    justify-content: space-between; /*colocando um espaçamento entre eles*/
+
+}
+
+.sobre div {
+    max-width: 50%;                 /*a div nunca será maior que 50%*/
+    padding-right: 40px;            /*espaçamento interno a direita para o texto n grudar na img*/
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sobre img {
+    border-radius: 8px;            /*arredondando as bordas da img*/
+    max-width: 400px;               /*diminuindo o tamnho da img*/
+    margin-right: 8px;               /*ajustando o espaçamento da img para coloca-la mais prox do txt*/
+}
+
+.animation_img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.sobre div h2 {
+    font-size: 32px;            
+    margin-bottom: 15px;            /*afastando o sobre do texto*/
+}
+
+.sobre div p {
+    margin-bottom: 15px;            /*afastando o <p>*/
+    font-size: 20px;
+}
+
+        /*INICIO PROJECTS*/
+
+.project{
+    background-color:#e4e3db;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.project h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.project p {
+    font-style: italic;
+    padding-bottom: 30px;
+}
+
+.project-list{
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project img {
+    width:22%;
+    border-radius: 22px;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /*aplicando uma transção de muda a opacidade "ease-in-out",  é a função de temporização, que controla a aceleração e desaceleração da transição. */
+    /*transform é uma propriedade que pode ser usada para aplicar transformações, como rotação, escala, translação, etc.*/
+}
+
+.project img:hover {
+    opacity: 1;
+    transform: scale(1.1);     /*aumenta o tamanho da imagem para 1.1 vezes o tamanho original. Isso cria um efeito de "zoom" sutil quando o mouse está sobre a imagem.*/
+}
+
+.project_list_2 {
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+    /*INICIO RODAPE*/
+
+footer {
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 65px;
+    color: #ddd;
+}
+
+footer a {
+    color: #ddd;
+    padding-right: 12px;
+    text-decoration: none;
+}
+
+    /*FIM RODAPE*/
+
+
+    /*RESPONSIVIDADE*/
+
+    @media (max-width: 1331px) {
+        .main h1 {
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main a {
+           display: flex;
+           justify-content: center;
+        }
+
+        .animation_img {
+            display: flex;
+            flex-direction: column;
+            display: none;
+        }
+
+        .sobre {
+            flex-direction: column;
+        }
+
+        .sobre div p {
+            font-size: 20px;  
+        }
+
+        .project h2 {
+            font-size: 25px;
+        }
+
+        .project p {
+            font-size: 15px;
+        }
+
+        .project-list {
+            width: 160%;
+        }
+
+        .project_list_2 {
+            width: 160%;
+        }
+    }
+
+    @media (max-width: 383px) {
+        .project h2 {
+            white-space: nowrap;
+        }
+
+        .project p {
+            white-space: nowrap;
+        }
+
+        .project-list {
+            width: 150%;
+        }
+
+        .project_list_2 {
+            width: 150%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
